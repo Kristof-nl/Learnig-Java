@@ -7,16 +7,18 @@ public class ReverseString {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please write a phrase: ");
-        String phrase = scanner.nextLine();
+        String text = scanner.nextLine();
         System.out.println("Your phrase from reverse is: ");
-        // Get a string length
-        int stringLength = phrase.length();
-        // Create an empty string
-        char[] charArray = new char[stringLength];
-        String output = "";
-        for (int i = stringLength - 1; i >= 0; i-- ) {
-            output = output + phrase.charAt(i);
+        // Get a array length
+        int arrayLength = text.length();
+        // Get char array from phrase
+        char[] arr = text.toCharArray();
+        // Create an empty char array
+        char[] reverseCharArray = new char[arrayLength];
+        // Fill the empty char array
+        for (int i = 0; i < arrayLength; i++ ) {
+            reverseCharArray[i] = arr[arrayLength -1 - i];
         }
-        System.out.println(output);
+        System.out.println(reverseCharArray);
     }
 }
